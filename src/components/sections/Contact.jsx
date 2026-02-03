@@ -94,6 +94,9 @@ const Contact = () => {
                                 darkModeOnly={true}
                                 background="transparent"
                                 borderRadius="9999px"
+                                width="auto"
+                                height="auto"
+                                style={{ display: 'inline-block' }}
                             >
                                 <a
                                     href="https://github.com/Gnanasekaran2004"
@@ -115,6 +118,9 @@ const Contact = () => {
                                 darkModeOnly={true}
                                 background="transparent"
                                 borderRadius="9999px"
+                                width="auto"
+                                height="auto"
+                                style={{ display: 'inline-block' }}
                             >
                                 <a
                                     href="https://www.linkedin.com/in/gnana-sekaran-20041025gs"
