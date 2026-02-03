@@ -1,0 +1,39 @@
+export const experience = [
+    {
+        id: 1,
+        type: "internship",
+        title: "Full-Stack Developer Intern",
+        company: "Femtosoft Technologies",
+        location: "Chennai",
+        period: "July 2025 - August 2025",
+        description: "Collaborated with engineering teams to build innovative software solutions using Python, ensuring features met user requirements.",
+        highlights: [
+            "Applied engineering best practices to improve web application efficiency",
+            "Demonstrated strong ability to learn new tools quickly",
+            "Contributed to collaborative development environment"
+        ],
+    },
+    {
+        id: 2,
+        type: "internship",
+        title: "Web Development Intern",
+        company: "Codesoft",
+        location: "Remote",
+        period: "May 2025 - June 2025",
+        description: "Built responsive user interfaces to enhance user experience and ensure cross-browser compatibility.",
+        highlights: [
+            "Worked with HTML, CSS, and JavaScript to implement functional web components",
+            "Implemented visual designs with attention to detail",
+            "Ensured responsive behavior across different devices"
+        ],
+    },
+    {
+        id: 3,
+        type: "education",
+        title: "B.E. Computer Science and Engineering",
+        institution: "C. Abdul Hakeem College of Engineering",
+        location: "Vellore, India",
+        period: "2022 - 2026",
+        cgpa: "7.8",
+    },
+];
