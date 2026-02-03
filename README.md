@@ -1,70 +1,194 @@
-# Getting Started with Create React App
+# Gnanasekaran D - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, professional portfolio showcasing my work as a Full-Stack Developer. Built with React, Tailwind CSS, and Framer Motion.
 
-## Available Scripts
+🌐 **Live Demo:** [View Portfolio](https://gnanasekaran2004.github.io/PROTFOLIO)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Modern Design**: Editorial-style layout with muted slate/emerald color palette
+- **Dark Mode**: Persistent theme switching with localStorage
+- **Responsive**: Mobile-first design that works on all devices
+- **Smooth Animations**: Subtle, professional animations using Framer Motion
+- **Case Study Projects**: Detailed project showcases with problem-solution structure
+- **Accessibility**: WCAG AA compliant with semantic HTML and keyboard navigation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React 19.2.0
+- **Styling**: Tailwind CSS 3.4.1
+- **Animations**: Framer Motion 12.23.24
+- **Icons**: Lucide React 0.316.0
+- **Build Tool**: Create React App
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Gnanasekaran2004/PROTFOLIO.git
+   cd PROTFOLIO
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📦 Build for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create an optimized production build:
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The build folder will contain the production-ready files.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📂 Project Structure
 
-### Making a Progressive Web App
+```
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Navigation.jsx    # Navigation bar with dark mode toggle
+│   │   └── Footer.jsx         # Footer with social links
+│   └── sections/
+│       ├── Hero.jsx           # Landing section
+│       ├── About.jsx          # Personal narrative
+│       ├── Experience.jsx     # Timeline of work & education
+│       ├── Projects.jsx       # Featured projects showcase
+│       ├── Skills.jsx         # Technical skills by domain
+│       └── Contact.jsx        # Contact information
+├── data/
+│   ├── projects.js            # Project data
+│   ├── experience.js          # Work experience & education
+│   └── skills.js              # Skills organized by category
+├── App.js                     # Main app component
+└── index.css                  # Tailwind CSS imports
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🎨 Design Philosophy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This portfolio follows an **"Engineering Narrative"** design concept:
 
-### Deployment
+- **Typography-led**: Strong hierarchy using Inter font
+- **Content-first**: Impact-focused writing, no buzzwords
+- **Subtle motion**: Purposeful animations that enhance UX
+- **Professional palette**: Muted colors (slate/zinc) with emerald accents
+- **Editorial layout**: Generous whitespace and intentional spacing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🌟 Featured Projects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Urban Voice
+A secure civic engagement platform built with Node.js, Express, and MongoDB.
+- RESTful API architecture
+- BCrypt + JWT authentication
+- Real-time status tracking
+- [Live Demo](https://urban-voice-app.onrender.com) | [GitHub](https://github.com/Gnanasekaran2004/Urban-Voice)
+
+### SparkCRM
+Full-stack CRM application with Spring Boot and React.
+- Spring Data JPA with dual-database setup
+- Material Tailwind UI with Framer Motion
+- Protected routes with React Router v7
+- [GitHub](https://github.com/Gnanasekaran2004/SparkCRM)
+
+---
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints for:
+- Mobile: 375px+
+- Tablet: 768px+
+- Desktop: 1024px+
+
+---
+
+## ♿ Accessibility
+
+- Semantic HTML5 structure
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- WCAG AA color contrast compliance
+- Focus states for all interactive elements
+
+---
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Import repository in [Vercel](https://vercel.com)
+3. Deploy automatically
+
+### Netlify
+1. Connect repository in [Netlify](https://netlify.com)
+2. Build command: `npm run build`
+3. Publish directory: `build`
+
+### GitHub Pages
+1. Install gh-pages: `npm install --save-dev gh-pages`
+2. Add to package.json:
+   ```json
+   "homepage": "https://gnanasekaran2004.github.io/PROTFOLIO",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
+3. Deploy: `npm run deploy`
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 📧 Contact
+
+**Gnanasekaran D**
+- Email: [sgnana238@gmail.com](mailto:sgnana238@gmail.com)
+- GitHub: [@Gnanasekaran2004](https://github.com/Gnanasekaran2004)
+- LinkedIn: [Gnana Sekaran](https://www.linkedin.com/in/gnana-sekaran-20041025gs)
+
+---
+
+## 🙏 Acknowledgments
+
+- Design inspiration from modern editorial layouts
+- Icons by [Lucide](https://lucide.dev)
+- Fonts by [Google Fonts](https://fonts.google.com)
+
+---
+
+**⭐ If you like this portfolio, please give it a star!**
