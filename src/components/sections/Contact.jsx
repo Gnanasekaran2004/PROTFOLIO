@@ -93,13 +93,13 @@ const Contact = () => {
                                 transitionDuration={600}
                                 darkModeOnly={true}
                                 background="transparent"
-                                borderRadius="0.5rem"
+                                borderRadius="9999px"
                             >
                                 <a
                                     href="https://github.com/Gnanasekaran2004"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-900 dark:bg-white text-white dark:text-primary-900 font-medium rounded-lg hover:bg-primary-800 dark:hover:bg-primary-100 transition-colors"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-900 dark:bg-white text-white dark:text-primary-900 font-medium rounded-full hover:bg-primary-800 dark:hover:bg-primary-100 transition-colors"
                                 >
                                     <Github size={20} />
                                     GitHub
@@ -114,13 +114,13 @@ const Contact = () => {
                                 transitionDuration={600}
                                 darkModeOnly={true}
                                 background="transparent"
-                                borderRadius="0.5rem"
+                                borderRadius="9999px"
                             >
                                 <a
                                     href="https://www.linkedin.com/in/gnana-sekaran-20041025gs"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077B5] text-white font-medium rounded-lg hover:bg-[#006399] transition-colors"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077B5] text-white font-medium rounded-full hover:bg-[#006399] transition-colors"
                                 >
                                     <Linkedin size={20} />
                                     LinkedIn
