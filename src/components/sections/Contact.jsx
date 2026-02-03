@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
+import GlareHover from '../ui/GlareHover';
 
 const Contact = () => {
     return (
@@ -31,25 +32,31 @@ const Contact = () => {
 
                     {/* Contact Methods */}
                     <div className="grid md:grid-cols-2 gap-6 mb-12">
-                        {/* Email */}
-                        <a
-                            href="mailto:sgnana238@gmail.com"
-                            className="flex items-start gap-4 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors group"
-                        >
-                            <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                                <Mail className="text-accent" size={24} />
-                            </div>
-                            <div>
-                                <h3 className="font-semibold text-primary-900 dark:text-white mb-1">
-                                    Email
-                                </h3>
-                                <p className="text-primary-700 dark:text-primary-300">
-                                    sgnana238@gmail.com
-                                </p>
-                            </div>
+                        {/* Email - Interactive */}
+                        <a href="mailto:sgnana238@gmail.com">
+                            <GlareHover
+                                className="flex items-start gap-4 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl hover:bg-primary-100 dark:hover:bg-primary-800 transition-all duration-300 hover:shadow-md group"
+                                glareOpacity={0.2}
+                                glareAngle={-20}
+                                glareSize={200}
+                                transitionDuration={600}
+                                playOnce={false}
+                            >
+                                <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                                    <Mail className="text-accent" size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-primary-900 dark:text-white mb-1">
+                                        Email
+                                    </h3>
+                                    <p className="text-primary-700 dark:text-primary-300">
+                                        sgnana238@gmail.com
+                                    </p>
+                                </div>
+                            </GlareHover>
                         </a>
 
-                        {/* Location */}
+                        {/* Location - Non-interactive (no glare) */}
                         <div className="flex items-start gap-4 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl">
                             <div className="p-3 bg-accent/10 rounded-lg">
                                 <MapPin className="text-accent" size={24} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { projects } from '../../data/projects';
 import { ExternalLink, Github } from 'lucide-react';
+import GlareHover from '../ui/GlareHover';
 
 const Projects = () => {
     const featuredProjects = projects.filter(p => p.featured);
@@ -35,93 +36,101 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="bg-primary-50 dark:bg-primary-900 rounded-2xl p-8 md:p-10"
                             >
-                                {/* Title */}
-                                <h3 className="text-2xl md:text-3xl font-bold text-primary-900 dark:text-white mb-4">
-                                    {project.title}
-                                </h3>
+                                <GlareHover
+                                    className="bg-primary-50 dark:bg-primary-900 rounded-2xl p-8 md:p-10 transition-shadow duration-300 hover:shadow-xl"
+                                    glareOpacity={0.25}
+                                    glareAngle={-30}
+                                    glareSize={300}
+                                    transitionDuration={700}
+                                    playOnce={false}
+                                >
+                                    {/* Title */}
+                                    <h3 className="text-2xl md:text-3xl font-bold text-primary-900 dark:text-white mb-4">
+                                        {project.title}
+                                    </h3>
 
-                                {/* Problem */}
-                                <div className="mb-6">
-                                    <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
-                                        Problem
-                                    </h4>
-                                    <p className="text-primary-700 dark:text-primary-300 leading-relaxed">
-                                        {project.problem}
-                                    </p>
-                                </div>
-
-                                {/* Solution */}
-                                <div className="mb-6">
-                                    <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
-                                        Solution
-                                    </h4>
-                                    <p className="text-primary-700 dark:text-primary-300 leading-relaxed">
-                                        {project.solution}
-                                    </p>
-                                </div>
-
-                                {/* Technical Highlights */}
-                                <div className="mb-6">
-                                    <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-3">
-                                        Technical Highlights
-                                    </h4>
-                                    <ul className="space-y-2">
-                                        {project.highlights.map((highlight, idx) => (
-                                            <li
-                                                key={idx}
-                                                className="text-primary-700 dark:text-primary-300 flex items-start gap-2"
-                                            >
-                                                <span className="text-accent mt-1.5">•</span>
-                                                <span>{highlight}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                {/* Tech Stack */}
-                                <div className="mb-6">
-                                    <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-3">
-                                        Tech Stack
-                                    </h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.techStack.map((tech, idx) => (
-                                            <span
-                                                key={idx}
-                                                className="px-3 py-1 bg-white dark:bg-primary-950 text-primary-700 dark:text-primary-300 text-sm rounded-full border border-primary-200 dark:border-primary-800"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
+                                    {/* Problem */}
+                                    <div className="mb-6">
+                                        <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
+                                            Problem
+                                        </h4>
+                                        <p className="text-primary-700 dark:text-primary-300 leading-relaxed">
+                                            {project.problem}
+                                        </p>
                                     </div>
-                                </div>
 
-                                {/* Links */}
-                                <div className="flex flex-wrap gap-4">
-                                    {project.liveUrl && (
-                                        <a
-                                            href={project.liveUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-600 transition-colors"
-                                        >
-                                            <ExternalLink size={18} />
-                                            View Live
-                                        </a>
-                                    )}
-                                    {project.githubUrl && (
-                                        <a
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-200 dark:bg-primary-800 text-primary-900 dark:text-white font-medium rounded-lg hover:bg-primary-300 dark:hover:bg-primary-700 transition-colors"
-                                        >
-                                            <Github size={18} />
-                                            View Code
-                                        </a>
-                                    )}
-                                </div>
+                                    {/* Solution */}
+                                    <div className="mb-6">
+                                        <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">
+                                            Solution
+                                        </h4>
+                                        <p className="text-primary-700 dark:text-primary-300 leading-relaxed">
+                                            {project.solution}
+                                        </p>
+                                    </div>
+
+                                    {/* Technical Highlights */}
+                                    <div className="mb-6">
+                                        <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-3">
+                                            Technical Highlights
+                                        </h4>
+                                        <ul className="space-y-2">
+                                            {project.highlights.map((highlight, idx) => (
+                                                <li
+                                                    key={idx}
+                                                    className="text-primary-700 dark:text-primary-300 flex items-start gap-2"
+                                                >
+                                                    <span className="text-accent mt-1.5">•</span>
+                                                    <span>{highlight}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Tech Stack */}
+                                    <div className="mb-6">
+                                        <h4 className="text-sm font-semibold text-accent uppercase tracking-wide mb-3">
+                                            Tech Stack
+                                        </h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.techStack.map((tech, idx) => (
+                                                <span
+                                                    key={idx}
+                                                    className="px-3 py-1 bg-white dark:bg-primary-950 text-primary-700 dark:text-primary-300 text-sm rounded-full border border-primary-200 dark:border-primary-800"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Links */}
+                                    <div className="flex flex-wrap gap-4">
+                                        {project.liveUrl && (
+                                            <a
+                                                href={project.liveUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-600 transition-colors"
+                                            >
+                                                <ExternalLink size={18} />
+                                                View Live
+                                            </a>
+                                        )}
+                                        {project.githubUrl && (
+                                            <a
+                                                href={project.githubUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-200 dark:bg-primary-800 text-primary-900 dark:text-white font-medium rounded-lg hover:bg-primary-300 dark:hover:bg-primary-700 transition-colors"
+                                            >
+                                                <Github size={18} />
+                                                View Code
+                                            </a>
+                                        )}
+                                    </div>
+                                </GlareHover>
                             </motion.div>
                         ))}
                     </div>
@@ -140,39 +149,47 @@ const Projects = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                                        className="bg-primary-50 dark:bg-primary-900 rounded-xl p-6"
                                     >
-                                        <h4 className="text-xl font-semibold text-primary-900 dark:text-white mb-3">
-                                            {project.title}
-                                        </h4>
-                                        <p className="text-primary-700 dark:text-primary-300 mb-4 leading-relaxed">
-                                            {project.description}
-                                        </p>
+                                        <GlareHover
+                                            className="bg-primary-50 dark:bg-primary-900 rounded-xl p-6 h-full transition-shadow duration-300 hover:shadow-lg"
+                                            glareOpacity={0.2}
+                                            glareAngle={-25}
+                                            glareSize={250}
+                                            transitionDuration={600}
+                                            playOnce={false}
+                                        >
+                                            <h4 className="text-xl font-semibold text-primary-900 dark:text-white mb-3">
+                                                {project.title}
+                                            </h4>
+                                            <p className="text-primary-700 dark:text-primary-300 mb-4 leading-relaxed">
+                                                {project.description}
+                                            </p>
 
-                                        {/* Tech Stack */}
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.techStack.map((tech, idx) => (
-                                                <span
-                                                    key={idx}
-                                                    className="px-2 py-1 bg-white dark:bg-primary-950 text-primary-700 dark:text-primary-300 text-xs rounded-full border border-primary-200 dark:border-primary-800"
+                                            {/* Tech Stack */}
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                {project.techStack.map((tech, idx) => (
+                                                    <span
+                                                        key={idx}
+                                                        className="px-2 py-1 bg-white dark:bg-primary-950 text-primary-700 dark:text-primary-300 text-xs rounded-full border border-primary-200 dark:border-primary-800"
+                                                    >
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+
+                                            {/* Link */}
+                                            {project.liveUrl && (
+                                                <a
+                                                    href={project.liveUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 text-accent hover:text-accent-600 font-medium transition-colors"
                                                 >
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-
-                                        {/* Link */}
-                                        {project.liveUrl && (
-                                            <a
-                                                href={project.liveUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 text-accent hover:text-accent-600 font-medium transition-colors"
-                                            >
-                                                <ExternalLink size={16} />
-                                                View Live
-                                            </a>
-                                        )}
+                                                    <ExternalLink size={16} />
+                                                    View Live
+                                                </a>
+                                            )}
+                                        </GlareHover>
                                     </motion.div>
                                 ))}
                             </div>
