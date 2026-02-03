@@ -13,7 +13,6 @@ export const projects = [
             "Dark/Light mode toggle with fully responsive UI"
         ],
         techStack: ["Node.js", "Express.js", "MongoDB", "EJS", "BCrypt", "JWT", "Multer"],
-        liveUrl: "https://urban-voice-app.onrender.com",
         githubUrl: "https://github.com/Gnanasekaran2004/Urban-Voice",
     },
     {
