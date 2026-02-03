@@ -32,15 +32,21 @@ const Contact = () => {
 
                     {/* Contact Methods */}
                     <div className="grid md:grid-cols-2 gap-6 mb-12">
-                        {/* Email - Interactive */}
-                        <a href="mailto:sgnana238@gmail.com">
-                            <GlareHover
-                                className="flex items-start gap-4 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl hover:bg-primary-100 dark:hover:bg-primary-800 transition-all duration-300 hover:shadow-md group"
-                                glareOpacity={0.2}
-                                glareAngle={-20}
-                                glareSize={200}
-                                transitionDuration={600}
-                                playOnce={false}
+                        {/* Email */}
+                        <GlareHover
+                            className="border-0"
+                            glareColor="#ffffff"
+                            glareOpacity={0.2}
+                            glareAngle={-20}
+                            glareSize={200}
+                            transitionDuration={600}
+                            darkModeOnly={true}
+                            background="transparent"
+                            borderRadius="0.75rem"
+                        >
+                            <a
+                                href="mailto:sgnana238@gmail.com"
+                                className="flex items-start gap-4 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors group"
                             >
                                 <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
                                     <Mail className="text-accent" size={24} />
@@ -53,10 +59,10 @@ const Contact = () => {
                                         sgnana238@gmail.com
                                     </p>
                                 </div>
-                            </GlareHover>
-                        </a>
+                            </a>
+                        </GlareHover>
 
-                        {/* Location - Non-interactive (no glare) */}
+                        {/* Location */}
                         <div className="flex items-start gap-4 p-6 bg-primary-50 dark:bg-primary-900 rounded-xl">
                             <div className="p-3 bg-accent/10 rounded-lg">
                                 <MapPin className="text-accent" size={24} />
@@ -78,24 +84,48 @@ const Contact = () => {
                             Find me online
                         </h3>
                         <div className="flex flex-wrap gap-4">
-                            <a
-                                href="https://github.com/Gnanasekaran2004"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-900 dark:bg-white text-white dark:text-primary-900 font-medium rounded-lg hover:bg-primary-800 dark:hover:bg-primary-100 transition-colors"
+                            <GlareHover
+                                className="inline-block border-0"
+                                glareColor="#ffffff"
+                                glareOpacity={0.3}
+                                glareAngle={-25}
+                                glareSize={180}
+                                transitionDuration={600}
+                                darkModeOnly={true}
+                                background="transparent"
+                                borderRadius="0.5rem"
                             >
-                                <Github size={20} />
-                                GitHub
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/gnana-sekaran-20041025gs"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077B5] text-white font-medium rounded-lg hover:bg-[#006399] transition-colors"
+                                <a
+                                    href="https://github.com/Gnanasekaran2004"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-900 dark:bg-white text-white dark:text-primary-900 font-medium rounded-lg hover:bg-primary-800 dark:hover:bg-primary-100 transition-colors"
+                                >
+                                    <Github size={20} />
+                                    GitHub
+                                </a>
+                            </GlareHover>
+                            <GlareHover
+                                className="inline-block border-0"
+                                glareColor="#ffffff"
+                                glareOpacity={0.3}
+                                glareAngle={-25}
+                                glareSize={180}
+                                transitionDuration={600}
+                                darkModeOnly={true}
+                                background="transparent"
+                                borderRadius="0.5rem"
                             >
-                                <Linkedin size={20} />
-                                LinkedIn
-                            </a>
+                                <a
+                                    href="https://www.linkedin.com/in/gnana-sekaran-20041025gs"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077B5] text-white font-medium rounded-lg hover:bg-[#006399] transition-colors"
+                                >
+                                    <Linkedin size={20} />
+                                    LinkedIn
+                                </a>
+                            </GlareHover>
                         </div>
                     </div>
                 </motion.div>

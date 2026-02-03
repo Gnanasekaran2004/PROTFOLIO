@@ -38,12 +38,16 @@ const Projects = () => {
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                             >
                                 <GlareHover
-                                    className="bg-primary-50 dark:bg-primary-900 rounded-2xl p-8 md:p-10 transition-shadow duration-300 hover:shadow-xl"
+                                    className="bg-primary-50 dark:bg-primary-900 rounded-2xl p-8 md:p-10 transition-shadow duration-300 hover:shadow-xl border-0"
+                                    glareColor="#ffffff"
                                     glareOpacity={0.25}
                                     glareAngle={-30}
                                     glareSize={300}
                                     transitionDuration={700}
                                     playOnce={false}
+                                    darkModeOnly={true}
+                                    background="transparent"
+                                    borderRadius="1rem"
                                 >
                                     {/* Title */}
                                     <h3 className="text-2xl md:text-3xl font-bold text-primary-900 dark:text-white mb-4">
@@ -108,26 +112,50 @@ const Projects = () => {
                                     {/* Links */}
                                     <div className="flex flex-wrap gap-4">
                                         {project.liveUrl && (
-                                            <a
-                                                href={project.liveUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-600 transition-colors"
+                                            <GlareHover
+                                                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-accent-600 transition-colors border-0"
+                                                glareColor="#ffffff"
+                                                glareOpacity={0.3}
+                                                glareAngle={-25}
+                                                glareSize={200}
+                                                transitionDuration={600}
+                                                darkModeOnly={true}
+                                                background="transparent"
+                                                borderRadius="0.5rem"
                                             >
-                                                <ExternalLink size={18} />
-                                                View Live
-                                            </a>
+                                                <a
+                                                    href={project.liveUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2"
+                                                >
+                                                    <ExternalLink size={18} />
+                                                    View Live
+                                                </a>
+                                            </GlareHover>
                                         )}
                                         {project.githubUrl && (
-                                            <a
-                                                href={project.githubUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-200 dark:bg-primary-800 text-primary-900 dark:text-white font-medium rounded-lg hover:bg-primary-300 dark:hover:bg-primary-700 transition-colors"
+                                            <GlareHover
+                                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-200 dark:bg-primary-800 text-primary-900 dark:text-white font-medium rounded-lg hover:bg-primary-300 dark:hover:bg-primary-700 transition-colors border-0"
+                                                glareColor="#ffffff"
+                                                glareOpacity={0.3}
+                                                glareAngle={-25}
+                                                glareSize={200}
+                                                transitionDuration={600}
+                                                darkModeOnly={true}
+                                                background="transparent"
+                                                borderRadius="0.5rem"
                                             >
-                                                <Github size={18} />
-                                                View Code
-                                            </a>
+                                                <a
+                                                    href={project.githubUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2"
+                                                >
+                                                    <Github size={18} />
+                                                    View Code
+                                                </a>
+                                            </GlareHover>
                                         )}
                                     </div>
                                 </GlareHover>
@@ -151,12 +179,15 @@ const Projects = () => {
                                         transition={{ duration: 0.6, delay: index * 0.1 }}
                                     >
                                         <GlareHover
-                                            className="bg-primary-50 dark:bg-primary-900 rounded-xl p-6 h-full transition-shadow duration-300 hover:shadow-lg"
+                                            className="bg-primary-50 dark:bg-primary-900 rounded-xl p-6 transition-shadow duration-300 hover:shadow-lg border-0 h-full"
+                                            glareColor="#ffffff"
                                             glareOpacity={0.2}
                                             glareAngle={-25}
                                             glareSize={250}
                                             transitionDuration={600}
-                                            playOnce={false}
+                                            darkModeOnly={true}
+                                            background="transparent"
+                                            borderRadius="0.75rem"
                                         >
                                             <h4 className="text-xl font-semibold text-primary-900 dark:text-white mb-3">
                                                 {project.title}
