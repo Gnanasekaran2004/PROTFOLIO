@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
-const Navigation = ({ darkMode, setDarkMode }) => {
+const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,8 +22,8 @@ const Navigation = ({ darkMode, setDarkMode }) => {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? 'bg-white/80 dark:bg-primary-950/80 backdrop-blur-md shadow-sm'
-                : 'bg-transparent'
+                    ? 'bg-primary-950/80 backdrop-blur-md shadow-sm'
+                    : 'bg-transparent'
                 }`}
         >
             <div className="max-w-6xl mx-auto px-6 py-4">
@@ -31,7 +31,7 @@ const Navigation = ({ darkMode, setDarkMode }) => {
                     {/* Logo */}
                     <button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="text-xl font-semibold text-primary-900 dark:text-white tracking-tight cursor-pointer bg-transparent border-none"
+                        className="text-xl font-semibold text-white tracking-tight cursor-pointer bg-transparent border-none"
                     >
                         Gnanasekaran D
                     </button>
@@ -42,34 +42,18 @@ const Navigation = ({ darkMode, setDarkMode }) => {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className="text-sm font-medium text-primary-700 dark:text-primary-300 hover:text-accent dark:hover:text-accent transition-colors"
+                                className="text-sm font-medium text-primary-300 hover:text-accent transition-colors"
                             >
                                 {link.label}
                             </a>
                         ))}
-
-                        {/* Dark Mode Toggle */}
-                        <button
-                            onClick={() => setDarkMode(!darkMode)}
-                            className="p-2 rounded-lg bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-700 transition-colors"
-                            aria-label="Toggle dark mode"
-                        >
-                            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-                        </button>
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center gap-3">
-                        <button
-                            onClick={() => setDarkMode(!darkMode)}
-                            className="p-2 rounded-lg bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300"
-                            aria-label="Toggle dark mode"
-                        >
-                            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-                        </button>
+                    <div className="md:hidden">
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="p-2 rounded-lg bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300"
+                            className="p-2 rounded-lg bg-primary-800 text-primary-300"
                             aria-label="Toggle menu"
                         >
                             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -85,7 +69,7 @@ const Navigation = ({ darkMode, setDarkMode }) => {
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="block text-sm font-medium text-primary-700 dark:text-primary-300 hover:text-accent dark:hover:text-accent transition-colors"
+                                className="block text-sm font-medium text-primary-300 hover:text-accent transition-colors"
                             >
                                 {link.label}
                             </a>

@@ -13,7 +13,7 @@ export const projects = [
             "Dark/Light mode toggle with fully responsive UI"
         ],
         techStack: ["Node.js", "Express.js", "MongoDB", "EJS", "BCrypt", "JWT", "Multer"],
-        githubUrl: "https://github.com/Gnanasekaran2004/Urban-Voice",
+        githubUrl: "https://github.com/Gnanasekaran2004/Urbanvoice",
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ export const projects = [
             "Optimized data management with clean separation of concerns"
         ],
         techStack: ["React 3.5", "Spring Boot 3.5", "Java 21", "Tailwind CSS", "MySQL", "Material Tailwind", "Framer Motion"],
-        githubUrl: "https://github.com/Gnanasekaran2004/SparkCRM",
+        githubUrl: "https://github.com/Gnanasekaran2004/CRM_Gflix",
     },
     {
         id: 3,

@@ -34,6 +34,6 @@ export const experience = [
         institution: "C. Abdul Hakeem College of Engineering",
         location: "Vellore, India",
         period: "2022 - 2026",
-        cgpa: "7.8",
+        
     },
 ];
