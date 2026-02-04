@@ -8,21 +8,12 @@ import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Contact from './components/sections/Contact';
 import ClickSpark from './components/ui/ClickSpark';
-
 function App() {
-  // Set dark mode permanently on mount
   useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []);
-
   return (
-    <ClickSpark
-      sparkColor='#3b82f6'
-      sparkSize={12}
-      sparkRadius={20}
-      sparkCount={8}
-      duration={500}
-    >
+    <ClickSpark sparkColor='#3b82f6' sparkSize={12} sparkRadius={20} sparkCount={8} duration={500}>
       <div className="min-h-screen bg-primary-950 transition-colors">
         <Navigation />
         <main>
@@ -38,5 +29,4 @@ function App() {
     </ClickSpark>
   );
 }
-
 export default App;

@@ -1,50 +1,6 @@
 export const projects = [
-    {
-        id: 1,
-        title: "Urban Voice",
-        featured: true,
-        problem: "Citizens lack accessible platforms to report civic issues and track their resolution status.",
-        solution: "Built a secure MVC web application enabling citizens to submit complaints, upload evidence, and monitor real-time status updates.",
-        highlights: [
-            "RESTful API architecture for complaint management and user operations",
-            "BCrypt password hashing + SVG-Captcha for enhanced security",
-            "JWT authentication with Multer for secure file uploads",
-            "Real-time status tracking (Sent, Viewed, Resolved) with actionable insights",
-            "Dark/Light mode toggle with fully responsive UI"
-        ],
-        techStack: ["Node.js", "Express.js", "MongoDB", "EJS", "BCrypt", "JWT", "Multer"],
-        githubUrl: "https://github.com/Gnanasekaran2004/Urbanvoice",
-    },
-    {
-        id: 2,
-        title: "SparkCRM",
-        featured: true,
-        problem: "Need for an efficient customer relationship management system with modern UI and secure authentication.",
-        solution: "Developed a full-stack CRM application with Spring Boot backend and React frontend, featuring dual-database support and seamless navigation.",
-        highlights: [
-            "Stateless HTTP Basic Auth with BCrypt for password security",
-            "Spring Data JPA with dual-database setup (MySQL for production, H2 for development)",
-            "Material Tailwind UI with Framer Motion animations for smooth UX",
-            "React Router v7 for protected routes and seamless data flow",
-            "Optimized data management with clean separation of concerns"
-        ],
-        techStack: ["React 3.5", "Spring Boot 3.5", "Java 21", "Tailwind CSS", "MySQL", "Material Tailwind", "Framer Motion"],
-        githubUrl: "https://github.com/Gnanasekaran2004/CRM_Gflix",
-    },
-    {
-        id: 3,
-        title: "Weather App",
-        featured: false,
-        description: "React and Node.js application displaying real-time weather information using external API integration.",
-        techStack: ["React", "Node.js", "External API"],
-        liveUrl: "https://weatherapp-main-l761.onrender.com",
-    },
-    {
-        id: 4,
-        title: "Expense Tracker",
-        featured: false,
-        description: "Full-stack expense management application with user authentication and daily expense tracking capabilities.",
-        techStack: ["React", "Node.js", "Authentication"],
-        liveUrl: "https://expense-trackerr-wo3g.onrender.com",
-    },
+    { id: 1, title: "Urban Voice", featured: true, problem: "Citizens lack accessible platforms to report civic issues and track their resolution status.", solution: "Built a secure MVC web application enabling citizens to submit complaints, upload evidence, and monitor real-time status updates.", highlights: ["RESTful API architecture for complaint management and user operations", "BCrypt password hashing + SVG-Captcha for enhanced security", "JWT authentication with Multer for secure file uploads", "Real-time status tracking (Sent, Viewed, Resolved) with actionable insights", "Dark/Light mode toggle with fully responsive UI"], techStack: ["Node.js", "Express.js", "MongoDB", "EJS", "BCrypt", "JWT", "Multer"], githubUrl: "https://github.com/Gnanasekaran2004/Urbanvoice" },
+    { id: 2, title: "SparkCRM", featured: true, problem: "Need for an efficient customer relationship management system with modern UI and secure authentication.", solution: "Developed a full-stack CRM application with Spring Boot backend and React frontend, featuring dual-database support and seamless navigation.", highlights: ["Stateless HTTP Basic Auth with BCrypt for password security", "Spring Data JPA with dual-database setup (MySQL for production, H2 for development)", "Material Tailwind UI with Framer Motion animations for smooth UX", "React Router v7 for protected routes and seamless data flow", "Optimized data management with clean separation of concerns"], techStack: ["React 3.5", "Spring Boot 3.5", "Java 21", "Tailwind CSS", "MySQL", "Material Tailwind", "Framer Motion"], githubUrl: "https://github.com/Gnanasekaran2004/CRM_Gflix" },
+    { id: 3, title: "Weather App", featured: false, description: "React and Node.js application displaying real-time weather information using external API integration.", techStack: ["React", "Node.js", "External API"], liveUrl: "https://weatherapp-main-l761.onrender.com" },
+    { id: 4, title: "Expense Tracker", featured: false, description: "Full-stack expense management application with user authentication and daily expense tracking capabilities.", techStack: ["React", "Node.js", "Authentication"], liveUrl: "https://expense-trackerr-wo3g.onrender.com" }
 ];
