@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-navy-900 text-slate-200;
+  }
+
+  ::selection {
+    @apply bg-violet-600/40 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-800;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-violet-700 rounded-full;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-white/8 hover:border-violet-500/40 hover:shadow-glow-violet;
+  }
+
+  .gradient-text-violet {
+    @apply bg-gradient-to-r from-violet-400 to-violet-300 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-emerald {
+    @apply bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-main {
+    @apply bg-gradient-to-r from-white via-violet-200 to-emerald-300 bg-clip-text text-transparent;
+  }
+
+  .glow-border-violet {
+    @apply border border-violet-500/50 shadow-glow-violet;
+  }
+
+  .glow-border-emerald {
+    @apply border border-emerald-500/50 shadow-glow-emerald;
+  }
+
+  .section-label {
+    @apply font-mono text-xs font-medium tracking-widest uppercase text-violet-400 mb-4;
+  }
+
+  .section-heading {
+    @apply font-sans text-4xl md:text-5xl font-bold text-white mb-12;
+  }
+
+  .tag-pill {
+    @apply px-3 py-1.5 rounded-full text-xs font-mono font-medium transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .mesh-bg {
+    background-image:
+      radial-gradient(at 40% 20%, hsla(258, 100%, 56%, 0.15) 0, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(172, 100%, 36%, 0.12) 0, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(258, 100%, 56%, 0.08) 0, transparent 50%),
+      radial-gradient(at 70% 80%, hsla(45, 100%, 50%, 0.07) 0, transparent 50%);
+  }
+
+  .noise-bg {
+    position: relative;
+  }
+  .noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .grid-lines-bg {
+    background-image:
+      linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
